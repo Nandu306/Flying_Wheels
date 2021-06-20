@@ -18,6 +18,26 @@ Jake = User.new(name: 'Jake', address: '123 Lane, Amsterdam', email: 'jake@gmail
 Jake.password = 'qwerty'
 Jake.save
 
+Nancy = User.new(name: 'Nancy', address: '123 Lane, Amsterdam', email: 'nancy@gmail.com')
+Nancy.password = 'qwerty'
+Nancy.save
+
+
+#Bikes
+
+Turpentine = Bike.new(type: 'mountain', frame_size: '25D', description: 'Sturdy and well suited to all terrains', rate_per_day: 20)
+Turpentine.save
+
+
+
+
+
+
+
+#Bookings
+
+
+
 
 
 
