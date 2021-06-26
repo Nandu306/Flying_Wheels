@@ -10,11 +10,11 @@ class User < ApplicationRecord
 
   validates :name, presence: true, uniqueness: true
   validates :address, presence: true
-  # validates :bike_owner_cannot_book_his_own_bike
+  # validates :bike_owner_cannot_book_hisn_own_bike
 
-  def bike_owner_cannot_book_his_own_bike
-    if bike.user == booking.user
-      errors.add(:booking, "You can't book your own bike")
-    end
-  end
+  # def bike_owner_cannot_book_his_own_bike
+  #   if bike.user == booking.user
+  #     errors.add(:booking, "You can't book your own bike")
+  #   end
+  # end
 end
