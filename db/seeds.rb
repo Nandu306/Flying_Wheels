@@ -57,6 +57,7 @@ Kids.save
 Booking1 = Booking.find_or_initialize_by(start_date: Date.new(2021,2,1), end_date: Date.new(2021,2,10), status: 'accepted', user:
 Nancy, bike: London)
 Booking1.save
+# p Booking1.errors.full_messages
 
 Booking2 = Booking.find_or_initialize_by(start_date: Date.new(2021,3,7), end_date: Date.new(2021,3,15), status: 'accepted', user:
 Alice, bike: Kids)
@@ -65,6 +66,10 @@ Booking2.save
 Booking3 = Booking.find_or_initialize_by(start_date: Date.new(2021,3,1), end_date: Date.new(2021,3,10), status: 'accepted', user:
 Peter, bike: Turpentine)
 Booking3.save
+
+# Booking4 = Booking.find_or_initialize_by(start_date: Date.new(2021,3,1), end_date: Date.new(2021,3,10), status: 'accepted', user: Jake, bike: Turpentine)
+# Booking4.save
+# p Booking4.errors.full_messages
 
 
 
