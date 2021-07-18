@@ -1,0 +1,16 @@
+
+.home-button {
+  color: black;
+  border: 2px solid black;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.home-button:hover {
+  opacity: 1;
+  color: red;
+  border-color: red;
+}
