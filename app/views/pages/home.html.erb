@@ -1,33 +1,36 @@
 
 
-<div class="container-fluid" style="padding: 20px;">
+<div class="container" style="width: 100vw; height: 80vh;">
   <div class="row">
-    <div class="col-sm-6 col-md-8 col-lg-6">
+    <div class="col-6 col-8 col-12">
 
 
-      <div>
-        <div class = "split left">
-          <div class = "centered">
-            <h1>Landing page headline</h1>
-            <p>Descriptive text</p>
-            <%#= link_to 'Book a bike', bike_path, class: 'home-button' %>
-            <%#= link_to 'List a bike', bike_path, class: 'home-button' %>
+        <div style= "display:  flex; flex-direction: column; justify-content: center; align-items: center;">
 
-            <div style= "display: inline-block;">
-             <button class="home-button" >Book a bike</button>
-             &nbsp;
-             <button class="home-button" >List a bike</button>
-           </div>
+          <div style= "width: 100vw;">
+            <div class= "banner">
+
+            <%= image_tag 'bike_illus.png' %>
+          </div>
+          </div>
 
 
-         </div>
-       </div>
 
-       <div class = "split right">
-        <div >
+
+          <div style= "width: 100vw; text-align: center;">
+            <h1>Headline text</h1>
+            <h3>Some descriptive text</h3>
+            <br>
+            <button class="home-button">Book a bike</button>
+            &nbsp;
+            <button class="home-button">List a bike</button>
+          </div>
+
+
 
         </div>
-      </div>
+
+
 
 
 
