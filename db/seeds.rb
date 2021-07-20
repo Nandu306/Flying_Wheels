@@ -8,6 +8,7 @@
 #   (name: 'Luke', movie: movies.first)
 
 # require 'date'
+# require 'open-uri'
 
 Booking.destroy_all
 Bike.destroy_all
@@ -39,16 +40,27 @@ Alice.save
 
 #Bikes
 
+# file = URI.open('https://cdn.shopify.com/s/files/1/0777/4197/files/1200x750-Page-Image-Custom-Builds.jpg?v=1479913058')
+
 Turpentine = Bike.find_or_initialize_by(bike_category: 'mountain', frame_size: '25D', description: 'Sturdy and well suited to
 all terrains', rate_per_day: 20, user: Jake)
+
+Turpentine.photo.attach(io: File.open('app/assets/images/mountain_bike.jpeg'), filename: 'mountain_bike.jpeg')
 Turpentine.save
+
 
 London = Bike.find_or_initialize_by(bike_category: 'city', frame_size: '30D', description: 'Sturdy and well suited to cities',
 rate_per_day: 15, user: John)
+
+London.photo.attach(io: File.open('app/assets/images/mountain_bike.jpeg'), filename: 'mountain_bike.jpeg')
+
 London.save
 
 Kids = Bike.find_or_initialize_by(bike_category: 'kids', frame_size: '18D', description: 'Sturdy and well suited to children',
 rate_per_day: 15, user: Nancy )
+
+Kids.photo.attach(io: File.open('app/assets/images/mountain_bike.jpeg'), filename: 'mountain_bike.jpeg')
+
 Kids.save
 
 
