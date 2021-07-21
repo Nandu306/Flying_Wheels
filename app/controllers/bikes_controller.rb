@@ -1,8 +1,14 @@
 class BikesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :index ]
+  skip_before_action :authenticate_user!, only: [ :index, :show ]
 
   def index
     @bikes = policy_scope(Bike)
+  end
+
+  def show
+    @bike = Bike.find(params[:id])
+    authorize @bike
+
   end
 
   private

@@ -3,14 +3,15 @@
 .banner img {
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 20px;
-  height: 60vh;
-  width: 40vw;
+  border-radius: 10px;
+  height: 65vh;
+  width: 65vw;
   // background-size: cover;
   justify-content: center;
   align-items: center;
   display: flex;
   margin: auto;
+  background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
 }
 
 
