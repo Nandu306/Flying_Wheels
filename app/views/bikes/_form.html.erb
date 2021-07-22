@@ -1,0 +1,11 @@
+<%= form_for(bike) do |f| %>
+  <%= f.label :bike_category %>
+  <%= f.text_field :bike_category %>
+  <%= f.label :frame_size %>
+  <%= f.text_field :frame_size %>
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+  <%= f.label :rate_per_day %>
+  <%= f.number_field :rate_per_day %>
+  <%= f.submit %>
+<% end %>

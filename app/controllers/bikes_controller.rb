@@ -8,6 +8,22 @@ class BikesController < ApplicationController
   def show
     @bike = Bike.find(params[:id])
     authorize @bike
+  end
+
+  def new
+    @bike = Bike.new
+    authorize @bike
+  end
+
+  def create
+    @bike = Bike.new(bike_params)
+    @bike.user = current_user
+    authorize @bike
+    if @bike.save
+      redirect_to @bike
+    else
+      render :new
+    end
 
   end
 
