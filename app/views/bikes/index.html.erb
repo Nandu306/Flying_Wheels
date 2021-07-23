@@ -2,14 +2,13 @@
 
 
 <div class="container">
-  <div class="row">
-    <div class="col-6 col-8 col-12">
+  <h1 class="mb-4" style= "text-align:center">These are all our bikes</h1>
+  <div class="row row-cols-1 row-cols-md-3">
 
-      <h1 class="mb-4" style= "text-align:center">These are all our bikes</h1>
 
-      <div class="card-deck">
+      <% @bikes.each do |bike| %>
 
-        <% @bikes.each do |bike| %>
+      <div class="col mb-4">
 
         <div class="card">
 
@@ -20,61 +19,60 @@
 
           <div class="card-body">
 
-              <div class="card-text" style="display:flex; align-items: baseline;">
-
-               <div style="font-size: 26px;">
-                🚲
-              </div>
-
-              &nbsp;
-
-               <div>
-                :
-              </div>
-
-               &nbsp; &nbsp; &nbsp;
-
-              <div>
-                <p> <%= bike.bike_category %> </p>
-              </div>
-
-            </div>
-
             <div class="card-text" style="display:flex; align-items: baseline;">
 
-               <div style="font-size: 26px;">
-                💰
-              </div>
+             <div style="font-size: 26px;">
+              🚲
+            </div>
 
-              &nbsp;
+            &nbsp;
 
-               <div>
-                :
-              </div>
+            <div>
+              :
+            </div>
 
-               &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp;
 
-              <div>
-                <p> <%= bike.rate_per_day %> </p>
-              </div>
-
+            <div>
+              <p> <%= bike.bike_category %> </p>
             </div>
 
           </div>
-          <div class="card-footer">
-            <small class="text-muted">
-              <%= link_to 'See more details about this bike', bike_path(bike) %>
-            </small>
+
+          <div class="card-text" style="display:flex; align-items: baseline;">
+
+           <div style="font-size: 26px;">
+            💰
+          </div>
+
+          &nbsp;
+
+          <div>
+            :
+          </div>
+
+          &nbsp; &nbsp; &nbsp;
+
+          <div>
+            <p> <%= bike.rate_per_day %> </p>
           </div>
 
         </div>
 
-        <% end %>
       </div>
-
+      <div class="card-footer">
+        <small class="text-muted">
+          <%= link_to 'See more details about this bike', bike_path(bike) %>
+        </small>
+      </div>
 
     </div>
   </div>
+
+  <% end %>
+
+
+</div>
 </div>
 
 
