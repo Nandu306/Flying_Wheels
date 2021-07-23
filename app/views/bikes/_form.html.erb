@@ -4,5 +4,8 @@
   <%= f.input :description, hint: 'We recommend a one-liner to make your bike stand out.' %>
   <%= f.input :rate_per_day, hint: 'The average rate on our website is $25 per day.' %>
   <%= f.input :photo, as: :file, hint: "Pictures speak a thousand words ;-)" %>
-  <%= f.submit 'List my bike', { class: "home-button" } %>
+  <div style="display: flex; justify-content: center; align-items: center;">
+    <%= f.submit 'List my bike', { class: "home-button" } %>
+  </div>
+
 <% end %>
