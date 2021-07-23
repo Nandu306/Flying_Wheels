@@ -20,7 +20,7 @@ class BikesController < ApplicationController
     @bike.user = current_user
     authorize @bike
     if @bike.save
-      redirect_to @bike
+      redirect_to bike_path(@bike)
     else
       render :new
     end
