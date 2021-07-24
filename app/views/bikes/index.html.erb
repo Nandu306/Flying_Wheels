@@ -1,48 +1,51 @@
 
 
 
+
 <div class="container">
   <h1 class="mb-4" style= "text-align:center">These are all our bikes</h1>
-  <div class="row row-cols-1 row-cols-md-3">
+
+  <div style="display:flex; justify-content: center; align-items:baseline;">
+
+    <!-- <p> Filter by bike type: </p>
+
+    &nbsp; &nbsp; -->
+
+    <%= link_to 'Mountain', bikes_path(:bike_category => 'mountain'), method: :get, class: 'index-button', style: 'text-decoration: none' %>
+
+    &nbsp; &nbsp;
+
+    <%= link_to 'City', bikes_path(:bike_category => 'city'), method: :get, class: 'index-button', style: 'text-decoration: none' %>
+
+    &nbsp; &nbsp;
+
+    <%= link_to "Children's", bikes_path(:bike_category => 'kids'), method: :get, class: 'index-button', style: 'text-decoration: none' %>
+
+  </div>
+
+  <br>
 
 
-      <% @bikes.each do |bike| %>
-
-      <div class="col mb-4">
-
-        <div class="card">
-
-          <div>
-            <%= cl_image_tag bike.photo.key, class: "card-img-top"  %>
-          </div>
+  <div class="row row-cols-1 row-cols-md-3 mt-4">
 
 
-          <div class="card-body">
+    <% @bikes.each do |bike| %>
 
-            <div class="card-text" style="display:flex; align-items: baseline;">
+    <div class="col mb-4">
 
-             <div style="font-size: 26px;">
-              🚲
-            </div>
+      <div class="card">
 
-            &nbsp;
+        <div>
+          <%= cl_image_tag bike.photo.key, class: "card-img-top"  %>
+        </div>
 
-            <div>
-              :
-            </div>
 
-            &nbsp; &nbsp; &nbsp;
-
-            <div>
-              <p> <%= bike.bike_category %> </p>
-            </div>
-
-          </div>
+        <div class="card-body">
 
           <div class="card-text" style="display:flex; align-items: baseline;">
 
            <div style="font-size: 26px;">
-            💰
+            🚲
           </div>
 
           &nbsp;
@@ -54,26 +57,48 @@
           &nbsp; &nbsp; &nbsp;
 
           <div>
-            <p> <%= bike.rate_per_day %> </p>
+            <p> <%= bike.bike_category %> </p>
           </div>
 
         </div>
 
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">
-          <%= link_to 'See more details about this bike', bike_path(bike) %>
-        </small>
+        <div class="card-text" style="display:flex; align-items: baseline;">
+
+         <div style="font-size: 26px;">
+          💰
+        </div>
+
+        &nbsp;
+
+        <div>
+          :
+        </div>
+
+        &nbsp; &nbsp; &nbsp;
+
+        <div>
+          <p> <%= bike.rate_per_day %> </p>
+        </div>
+
       </div>
 
     </div>
+    <div class="card-footer">
+      <small class="text-muted">
+        <%= link_to 'See more details about this bike', bike_path(bike) %>
+      </small>
+    </div>
+
   </div>
+</div>
 
-  <% end %>
+<% end %>
 
 
 </div>
 </div>
+
+
 
 
 

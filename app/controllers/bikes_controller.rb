@@ -3,6 +3,7 @@ class BikesController < ApplicationController
 
   def index
     @bikes = policy_scope(Bike)
+    @bikes = policy_scope(Bike).filter_by_bike_category(params[:bike_category]) if params[:bike_category].present?
   end
 
   def show
@@ -24,7 +25,6 @@ class BikesController < ApplicationController
     else
       render :new
     end
-
   end
 
   private
