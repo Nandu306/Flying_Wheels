@@ -4,7 +4,7 @@
     <div class="col-6 col-8 col-12">
 
       <%= link_to bikes_path, style: "text-decoration: none; color: black;" do %>
-        <%= image_tag('arrow_back.svg') + " " + ("Back to bikes") %>
+      <%= image_tag('arrow_back.svg') + " " + ("Back to bikes") %>
       <% end %>
 
       <div style="display: flex;" class="mt-3">
@@ -25,7 +25,15 @@
 
         <div class="card mb-3 border border-dark shadow" style ="width: 40%; height: 48vh; border-radius: 20px;">
           <div class="card-body">
-            <%= render "bookings/form" %>
+            <%= simple_form_for ([@bike, @booking]), html: { id: :booking_form } do |f| %>
+            <%= f.input :start_date, as: :date, order: [:day, :month, :year], id: "start" %>
+            <%= f.input :end_date, as: :date, order: [:day, :month, :year], id: "end"  %>
+            <br>
+            <div style="display: flex; justify-content: center; align-items: center;">
+              <%= f.submit 'Book bike', { class: "home-button" } %>
+            </div>
+            <% end %>
+            <div id="total"></div>
           </div>
         </div>
 
@@ -36,6 +44,34 @@
 </div>
 
 
+<script>
+
+
+
+  const calculatePrice = () => {
+
+
+    // let theForm = document.forms['booking_form'];
+
+    let start = new Date (document.getElementbyId('booking_start_date_3i').value);
+
+    console.log(start);
+
+    let end = new Date(document.getElementbyId('booking_end_date_3i').value);
+
+    return price = parseInt(end - start);
+
+
+  }
+
+  const displayPrice = () => {
+    if(document.getElementbyId('booking_end_date_3i')) {
+      document.getElementById('total').innerHTML = calculatePrice();
+      console.log(calculatePrice());
+    }
+  }
+
+</script>
 
 
 
