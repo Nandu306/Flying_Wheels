@@ -10,7 +10,7 @@ class BookingsController < ApplicationController
     if @booking.save
       redirect_to bikes_path, notice: "Booking successful"
     else
-      render :new
+      render 'bikes/show'
     end
   end
 
