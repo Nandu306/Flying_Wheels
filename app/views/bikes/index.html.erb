@@ -5,7 +5,7 @@
 <div class="container">
   <h1 class="mb-4" style= "text-align:center">These are all our bikes</h1>
 
-  <div style="display:flex; justify-content: center; align-items:baseline;">
+  <div style="display:flex; justify-content: center; align-items:center;">
 
     <!-- <p> Filter by bike type: </p>
 
@@ -37,10 +37,10 @@
 
     <div class="col mb-4">
 
-      <div class="card">
+      <div class="card" style = "border-radius: 10px;">
 
         <div>
-          <%= cl_image_tag bike.photo.key, class: "card-img-top"  %>
+          <%= cl_image_tag bike.photo.key, class: "card-img-top", style: "border-top-right-radius: 10px; border-top-left-radius:10px"  %>
         </div>
 
 
@@ -101,6 +101,18 @@
 
 </div>
 </div>
+
+
+<script>
+
+  const element = document.querySelector('#box');
+
+  element.addEventListener("click", (event) => {
+    console.log(event);
+    event.currentTarget.classList.toggle('clicked');
+  })
+
+</script>
 
 
 
