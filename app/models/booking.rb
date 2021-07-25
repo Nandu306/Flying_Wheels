@@ -10,6 +10,12 @@ class Booking < ApplicationRecord
 
   validate :bike_owner_cannot_book_his_own_bike
 
+
+  def total_price
+    number_of_days = (end_date - start_date).to_i
+    total_price = ((bike.rate_per_day) * number_of_days).round(1)
+  end
+
   private
 
   def start_date_cannot_be_greater_than_end_date

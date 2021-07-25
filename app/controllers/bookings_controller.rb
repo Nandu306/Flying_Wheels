@@ -1,5 +1,16 @@
 class BookingsController < ApplicationController
 
+
+  # def index
+  #   @bookings = policy_scope(Booking).where(@booking.user.name = current_user)
+  # end
+
+  def my_bookings
+  @bookings = current_user.bookings_as_owner
+  authorize @bookings
+  end
+
+
   def create
     @bike = Bike.find(params[:bike_id])
     @booking = Booking.new(booking_params)
