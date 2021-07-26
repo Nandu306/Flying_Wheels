@@ -1,11 +1,7 @@
 
-
-
-
 <div class="container">
-  <h1 class="mb-4" style= "text-align:center">These are all our bikes</h1>
 
-  <div style="display:flex; justify-content: center; align-items:center;">
+  <div class="mt-2 mb-3" style="display:flex; justify-content: left; align-items:left;">
 
     <!-- <p> Filter by bike type: </p>
 
@@ -23,11 +19,9 @@
 
     &nbsp; &nbsp;
 
-    <%= link_to "Children's", bikes_path(:bike_category => 'kids'), method: :get, class: 'index-button', style: 'text-decoration: none' %>
+    <%= link_to "Children", bikes_path(:bike_category => 'kids'), method: :get, class: 'index-button', style: 'text-decoration: none' %>
 
   </div>
-
-  <br>
 
 
   <div class="row row-cols-1 row-cols-md-3 mt-4">
