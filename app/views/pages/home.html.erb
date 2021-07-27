@@ -5,40 +5,29 @@
     <div class="mt-2 col-sm">
 
 
-        <div style= "display:  flex; flex-direction: column; justify-content: center; align-items: center;">
+      <div style= "display:  flex; flex-direction: column; justify-content: center; align-items: center;">
 
-          <div style= "width: 100vw;">
-            <div class= "banner img-fluid">
+        <div style= "width: 100vw;">
+          <div class= "banner img-fluid text-center">
 
             <%= image_tag 'bike_city_banner.jpg' %>
             <br>
           </div>
-          </div>
+        </div>
 
-
-
-
-          <div style= "width: 100vw; text-align: center;">
-            <h1>Headline text</h1>
-            <h4>Some descriptive text</h4>
-            <br>
-            <%= link_to 'Book a bike', bikes_path, class: "home-button", style: 'text-decoration: none' %>
-            <!-- <button class="home-button">Book a bike</button> -->
-            &nbsp;
-            <%= link_to 'List a bike', new_bike_path, class: "home-button", style: 'text-decoration: none' %>
-            <!-- <button class="home-button">List a bike</button> -->
-          </div>
-
-
-
+        <div class= "mt-2" style= "width: 100vw; text-align: center;">
+          <h1>Headline text</h1>
+          <h4>Some descriptive text</h4>
+          <br>
+          <%= link_to 'Book a bike', bikes_path, class: "home-button", style: 'text-decoration: none' %>
+          <!-- <button class="home-button">Book a bike</button> -->
+          &nbsp;
+          <%= link_to 'List a bike', new_bike_path, class: "home-button", style: 'text-decoration: none' %>
+          <!-- <button class="home-button">List a bike</button> -->
         </div>
 
 
-
-
-
-
-
+      </div>
 
 
     </div>
