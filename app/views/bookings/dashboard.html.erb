@@ -1,0 +1,87 @@
+
+<div class="container">
+
+  <h2 class= "text-center"> Welcome <%= current_user.name %> </h2>
+
+  <p class= "text-center mb-4">Your bookings info:</p>
+
+
+
+
+
+
+
+
+<% if current_user.bookings.empty? %>
+<p class= "text-center">  <%= "You haven't made any bookings as yet" %> </p>
+<% else %>
+
+
+<div class="row row-cols-1 row-cols-md-3 mt-4">
+
+    <% @bookings.each do |booking| %>
+
+    <div class="col mb-4">
+
+      <div class="card shadow-sm" style = "border-radius: 10px;">
+
+        <div class="card-body">
+          <div class="card-text">
+            <p> <strong>Booking start date: </strong> <%= booking.start_date %> </p>
+            <p> <strong>Booking end date: </strong> <%= booking.end_date %> </p>
+            <p> <strong>Total price: </strong> $<%= booking.total_price %> </p>
+            <p> <strong>Status: </strong> <%= booking.status %> </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <% end %>
+
+<% end %>
+
+
+</div>
+
+
+
+
+
+<!-- <div class="container">
+  <h1 class="mt-4 mb-2" style= "text-align:center">Bookings received</h1>
+
+  <br>
+
+  <div class="row row-cols-1 row-cols-md-3 mt-4">
+
+    <% @bookings.each do |booking| %>
+
+    <div class="col mb-4">
+
+      <div class="card shadow-sm" style = "border-radius: 10px;">
+
+        <div class="card-body">
+          <div class="card-text">
+
+            <p> <strong>Customer name: </strong> <%= booking.user.name %> </p>
+            <p> <strong>Customer email: </strong> <%= booking.user.email %> </p>
+            <p> <strong>Booking start date: </strong> <%= booking.start_date %> </p>
+            <p> <strong>Booking end date: </strong> <%= booking.end_date %> </p>
+            <p> <strong>Total price: </strong> $<%= booking.total_price %> </p>
+
+          </div>
+        </div>
+
+        <div class="card-footer" style= "display: flex; justify-content: space-between;">
+            <%= link_to 'Accept' %>
+            <%= link_to 'Reject' %>
+        </div>
+
+      </div>
+
+    </div>
+    <% end %>
+  </div>
+
+</div> -->
