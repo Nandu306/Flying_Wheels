@@ -12,4 +12,8 @@ class BookingPolicy < ApplicationPolicy
   def my_bookings?
     return true
   end
+
+  def dashboard?
+    return true
+  end
 end

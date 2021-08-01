@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   end
 
   get '/my_bookings', to: 'bookings#my_bookings'
+  get '/dashboard', to: 'bookings#dashboard'
 end

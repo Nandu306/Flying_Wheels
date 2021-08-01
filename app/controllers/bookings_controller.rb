@@ -6,8 +6,13 @@ class BookingsController < ApplicationController
   # end
 
   def my_bookings
-  @bookings = current_user.bookings_as_owner
-  authorize @bookings
+    @bookings = current_user.bookings_as_owner
+    authorize @bookings
+  end
+
+  def dashboard
+    @bookings = current_user.bookings
+    authorize @bookings
   end
 
 
