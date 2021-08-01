@@ -52,14 +52,14 @@ Turpentine.save
 London = Bike.find_or_initialize_by(bike_category: 'city', frame_size: '30D', description: 'Sturdy and well suited to cities',
 rate_per_day: 15, user: John)
 
-London.photo.attach(io: File.open('app/assets/images/mountain_bike.jpeg'), filename: 'mountain_bike.jpeg')
+London.photo.attach(io: File.open('app/assets/images/city.jpg'), filename: 'city.jpg')
 
 London.save
 
 Kids = Bike.find_or_initialize_by(bike_category: 'kids', frame_size: '18D', description: 'Sturdy and well suited to children',
 rate_per_day: 15, user: Nancy )
 
-Kids.photo.attach(io: File.open('app/assets/images/mountain_bike.jpeg'), filename: 'mountain_bike.jpeg')
+Kids.photo.attach(io: File.open('app/assets/images/Kids bike_3.jpg'), filename: 'Kids bike_3.jpg')
 
 Kids.save
 

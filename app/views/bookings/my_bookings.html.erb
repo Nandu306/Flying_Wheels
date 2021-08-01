@@ -1,9 +1,13 @@
 
 
 <div class="container">
-  <h1 class="mt-4 mb-2" style= "text-align:center">Bookings received</h1>
+  <h2 class="mt-4 mb-2" style= "text-align:center">Bookings received</h2>
 
   <br>
+
+  <% if current_user.bookings_as_owner.empty? %>
+  <p class= "text-center">  <%= "You haven't received any bookings as yet" %> </p>
+  <% else %>
 
   <div class="row row-cols-1 row-cols-md-3 mt-4">
 
@@ -26,8 +30,8 @@
         </div>
 
         <div class="card-footer" style= "display: flex; justify-content: space-between;">
-            <%= link_to 'Accept' %>
-            <%= link_to 'Reject' %>
+          <%= link_to 'Accept' %>
+          <%= link_to 'Reject' %>
         </div>
 
       </div>
@@ -35,5 +39,6 @@
     </div>
     <% end %>
   </div>
+  <% end %>
 
 </div>
