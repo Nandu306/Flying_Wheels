@@ -4,3 +4,19 @@
 //               0 4px 4px rgba(0,0,0,0.15),
 //               0 8px 8px rgba(0,0,0,0.15);
 // }
+
+.card-index:hover {
+  transform: scale(1.02);
+}
+
+.card-index-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+.card-show-img-top {
+    width: 100%;
+    height: 30vw;
+    object-fit: cover;
+}
