@@ -11,12 +11,85 @@
 
 .card-index-img-top {
     width: 100%;
-    height: 15vw;
+    height: 35vh;
     object-fit: cover;
 }
 
 .card-show-img-top {
     width: 100%;
-    height: 30vw;
-    object-fit: cover;
+    height: 55vh;
+    object-fit: fit;
+}
+
+// .card-show-right {
+//       width: 60%;
+//     }
+
+
+@media (max-width: 480px) {
+  .card-show-img-top {
+    width: 100%;
+    height: 45vh;
+    object-fit: fit;
+  }
+}
+
+// @media (min-width: 992px) {
+//     .card-show-right{
+//         width: 60%;
+//     }
+// }
+
+// @media screen and (min-width: 992px) {
+//   div.card {
+//     width: 60%;
+//   }
+// }
+
+@media (max-width: 480px) {
+  .card-log-in {
+    width: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-log-in {
+    width: 40%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-sign-up {
+    width: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-sign-up {
+    width: 40%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-password {
+    width: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-password {
+    width: 40%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-list {
+    width: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-list {
+    width: 40%;
+  }
 }
