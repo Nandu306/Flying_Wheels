@@ -1,35 +1,35 @@
 
 <div class="container">
 
-  <div class="mt-2 mb-3" style="display:flex; justify-content: left; align-items:left;">
+  <!-- <div class="mt-2 mb-3 d-flex flex-lg-nowrap flex-lg-row"> -->
 
     <!-- <p> Filter by bike type: </p>
 
-    &nbsp; &nbsp; -->
+    &nbsp; &nbsp;
 
-    <%= link_to 'All', bikes_path, method: :get, class: 'index-button', style: 'text-decoration: none' %>
+    <%#= link_to 'All', bikes_path, method: :get, class: 'index-button', style: 'text-decoration: none' %>
 
     &nbsp; &nbsp;
 
-    <%= link_to 'Mountain', bikes_path(:bike_category => 'mountain'), method: :get, class: 'index-button', style: 'text-decoration: none' %>
+    <%#= link_to 'Mountain', bikes_path(:bike_category => 'mountain'), method: :get, class: 'index-button', style: 'text-decoration: none' %>
 
     &nbsp; &nbsp;
 
-    <%= link_to 'City', bikes_path(:bike_category => 'city'), method: :get, class: 'index-button', style: 'text-decoration: none' %>
+    <%#= link_to 'City', bikes_path(:bike_category => 'city'), method: :get, class: 'index-button', style: 'text-decoration: none' %>
 
     &nbsp; &nbsp;
 
-    <%= link_to "Children", bikes_path(:bike_category => 'kids'), method: :get, class: 'index-button', style: 'text-decoration: none' %>
+    <%#= link_to "Children", bikes_path(:bike_category => 'kids'), method: :get, class: 'index-button', style: 'text-decoration: none' %>
 
   </div>
-
+ -->
 
   <div class="row row-cols-1 row-cols-md-3 mt-4">
 
 
     <% @bikes.each do |bike| %>
 
-    <div class="col mb-4">
+    <div class="col mb-4 ">
 
       <div class="card shadow-sm card-index" style = "border-radius: 10px;">
 
@@ -97,7 +97,7 @@
 </div>
 
 
-<script>
+<!-- <script>
 
   const element = document.querySelector('#box');
 
@@ -106,7 +106,7 @@
     event.currentTarget.classList.toggle('clicked');
   })
 
-</script>
+</script> -->
 
 
 

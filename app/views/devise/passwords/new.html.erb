@@ -1,8 +1,8 @@
 <div class="container">
   <div class="row">
     <div class="col-6 col-8 col-12">
-      <h2 style="text-align:center">Forgot your password?</h2>
-      <div class="card mt-3 mb-3 border border-dark shadow mx-auto" style ="width: 40%; height: auto; border-radius: 20px;">
+      <h2 class="mb-4 text-center">Forgot your password?</h2>
+      <div class="card card-password mt-3 mb-3 border border-dark shadow mx-auto" style ="height: auto; border-radius: 20px;">
         <div class="card-body">
 
           <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>

@@ -6,6 +6,7 @@
   border-radius: 10px;
   height: 60vh;
   width: 60vw;
+  object-fit: cover;
   // background-size: cover;
   // justify-content: center;
   // align-items: center;
@@ -15,3 +16,10 @@
 }
 
 
+@media (max-width: 480px) {
+  .banner img {
+    width: 80vw;
+    height: 60vh;
+    object-fit: cover;
+  }
+}
