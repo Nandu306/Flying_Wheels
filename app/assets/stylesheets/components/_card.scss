@@ -17,8 +17,8 @@
 
 .card-show-img-top {
     width: 100%;
-    height: 55vh;
-    object-fit: fit;
+    height: 60vh;
+    object-fit: cover;
 }
 
 // .card-show-right {
@@ -93,3 +93,28 @@
     width: 40%;
   }
 }
+
+@media (max-width: 480px) {
+  .card-right {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-right {
+    width: 60%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-left {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-left {
+    width: 40%;
+  }
+}
+
