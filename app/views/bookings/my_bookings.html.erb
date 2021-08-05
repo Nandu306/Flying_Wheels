@@ -29,9 +29,24 @@
           </div>
         </div>
 
-        <div class="card-footer" style= "display: flex; justify-content: space-between;">
-          <%= link_to 'Accept' %>
-          <%= link_to 'Reject' %>
+        <div class="card-footer text-center" >
+          <% if booking.status == 'accepted' %>
+
+            <%= link_to 'Accepted', dashboard_path(:status => 'accepted'), style: "color:grey" %>
+
+          <% elsif booking.status == 'rejected'%>
+
+            <%= link_to 'Rejected', dashboard_path(:status => 'rejected'), style: "color:grey" %>
+
+          <% else %>
+
+          <div style= "display: flex; justify-content: space-between;">
+            <%= link_to 'Accept' %>
+            <%= link_to 'Reject' %>
+          </div>
+
+          <% end %>
+
         </div>
 
       </div>
