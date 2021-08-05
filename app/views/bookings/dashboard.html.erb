@@ -9,6 +9,10 @@
 
 <% if current_user.bookings.empty? %>
 <p class= "text-center">  <%= "You haven't made any bookings as yet" %> </p>
+<div class="text-center mt-4">
+  <%= link_to 'View our bikes', bikes_path, class: "home-button", style: "text-decoration: none" %>
+</div>
+
 <% else %>
 
 
