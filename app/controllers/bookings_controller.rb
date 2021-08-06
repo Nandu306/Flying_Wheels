@@ -42,11 +42,8 @@ class BookingsController < ApplicationController
     end
 
     authorize @booking
-    if @booking.save
-      redirect_to my_bookings_path, notice: "Update successful"
-    else
-      render 'bikes/show'
-    end
+    @booking.save
+    redirect_to my_bookings_path, notice: "Update successful"
 
 
   end
