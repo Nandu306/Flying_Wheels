@@ -29,7 +29,12 @@
             <p> <strong>Booking start date: </strong> <%= booking.start_date %> </p>
             <p> <strong>Booking end date: </strong> <%= booking.end_date %> </p>
             <p> <strong>Total price: </strong> $<%= booking.total_price %> </p>
-            <p> <strong>Status: </strong> <%= booking.status %> </p>
+
+              <% if booking.status.nil? %>
+                <p> <strong>Status: Pending </strong>
+              <% else %>
+                <p> <strong>Status: <%= booking.status %> </strong>
+              <% end %>
           </div>
         </div>
 
