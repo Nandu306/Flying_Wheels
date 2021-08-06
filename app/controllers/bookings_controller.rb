@@ -31,6 +31,27 @@ class BookingsController < ApplicationController
   end
 
 
+  def update
+    @booking = Booking.find(params[:id])
+    if params[:status] == "0"
+      @booking.accepted!
+    elsif params[:status] == "1"
+      @booking.rejected!
+    else
+      @booking.pending!
+    end
+
+    authorize @booking
+    if @booking.save
+      redirect_to my_bookings_path, notice: "Update successful"
+    else
+      render 'bikes/show'
+    end
+
+
+  end
+
+
   private
 
   def booking_params
