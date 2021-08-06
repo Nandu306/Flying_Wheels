@@ -30,19 +30,19 @@
         </div>
 
         <div class="card-footer text-center" >
-          <% if booking.status == 'accepted' %>
+          <% if booking.accepted? %>
 
-            <%= link_to 'Accepted', dashboard_path(:status => 'accepted'), style: "color:grey" %>
+            <p style= "color:grey; margin-bottom: 0px;"> Accepted </p>
 
-          <% elsif booking.status == 'rejected'%>
+          <% elsif booking.rejected? %>
 
-            <%= link_to 'Rejected', dashboard_path(:status => 'rejected'), style: "color:grey" %>
+            <p style= "color:grey; margin-bottom: 0px;"> Rejected </p>
 
           <% else %>
 
           <div style= "display: flex; justify-content: space-between;">
-            <%= link_to 'Accept' %>
-            <%= link_to 'Reject' %>
+            <%= link_to 'Accept', booking_path(booking, status: 0), method: :patch %>
+            <%= link_to 'Reject', booking_path(booking, status: 1), method: :patch %>
           </div>
 
           <% end %>
