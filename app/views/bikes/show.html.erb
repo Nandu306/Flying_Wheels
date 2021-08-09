@@ -23,7 +23,9 @@
 
         &nbsp;  &nbsp;  &nbsp;  &nbsp;
 
-        <div class="card card-left mb-3 border border-dark shadow" style ="height: 48vh; border-radius: 20px;">
+        <div class="d-flex flex-column">
+
+          <div class="card card-left mb-3 border border-dark shadow" style ="height: 48vh; border-radius: 20px;">
           <div class="card-body">
             <%= simple_form_for ([@bike, @booking]), html: { id: :booking_form } do |f| %>
             <%= f.input :start_date, as: :date, order: [:day, :month, :year], id: "start" %>
@@ -37,6 +39,22 @@
           </div>
         </div>
 
+
+        <div class="card card-left border border-dark shadow" style ="height: 48vh; border-radius: 20px;">
+          <div class="card-body">
+            <div id="map"
+            class= "mx-auto text-center"
+            style="width: 100%; height: 41vh; border-radius: 10px; padding:5px;"
+            data-markers="<%= @markers.to_json %>"
+            data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+            </div>
+
+          </div>
+        </div>
+
+        </div>
+
+
       </div>
 
     </div>
@@ -44,7 +62,11 @@
 </div>
 
 
-<script>
+
+
+
+
+<<!-- script>
 
 
 
@@ -71,7 +93,7 @@
     }
   }
 
-</script>
+</script> -->
 
 
 

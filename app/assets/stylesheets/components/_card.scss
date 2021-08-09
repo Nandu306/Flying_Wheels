@@ -97,12 +97,14 @@
 @media (max-width: 480px) {
   .card-right {
     width: 100%;
+    height: auto;
   }
 }
 
 @media (min-width: 992px) {
   .card-right {
     width: 60%;
+    height: 99vh;
   }
 }
 
@@ -114,7 +116,7 @@
 
 @media (min-width: 992px) {
   .card-left {
-    width: 40%;
+    width: 100%;
   }
 }
 

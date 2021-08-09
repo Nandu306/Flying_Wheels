@@ -33,12 +33,12 @@ gem 'devise'
 # gems added my me
 
 gem 'pundit'
-gem 'simple_form'
 
 gem 'dotenv-rails', groups: [:development, :test]
 
 gem 'cloudinary', '~> 1.16.0'
 
+gem 'geocoder'
 
 
 gem 'autoprefixer-rails', '10.2.5'

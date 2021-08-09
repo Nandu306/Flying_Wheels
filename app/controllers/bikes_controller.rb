@@ -10,6 +10,13 @@ class BikesController < ApplicationController
     @bike = Bike.find(params[:id])
     authorize @bike
     @booking = Booking.new
+
+    @markers = [
+      {
+        lat: @bike.latitude,
+        lng: @bike.longitude,
+      }
+    ]
   end
 
   def new
