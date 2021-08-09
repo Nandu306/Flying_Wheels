@@ -43,21 +43,21 @@ Alice.save
 # file = URI.open('https://cdn.shopify.com/s/files/1/0777/4197/files/1200x750-Page-Image-Custom-Builds.jpg?v=1479913058')
 
 Turpentine = Bike.find_or_initialize_by(bike_category: 'mountain', frame_size: '25D', description: 'Sturdy and well suited to
-all terrains', rate_per_day: 20, user: Jake)
+all terrains', address: 'Oosterpark, Amsterdam', rate_per_day: 20, user: Jake)
 
 Turpentine.photo.attach(io: File.open('app/assets/images/mountain_bike.jpeg'), filename: 'mountain_bike.jpeg')
 Turpentine.save
 
 
 London = Bike.find_or_initialize_by(bike_category: 'city', frame_size: '30D', description: 'Sturdy and well suited to cities',
-rate_per_day: 15, user: John)
+address: 'Dam Square, Amsterdam', rate_per_day: 15, user: John)
 
 London.photo.attach(io: File.open('app/assets/images/city.jpg'), filename: 'city.jpg')
 
 London.save
 
 Kids = Bike.find_or_initialize_by(bike_category: 'kids', frame_size: '18D', description: 'Sturdy and well suited to children',
-rate_per_day: 15, user: Nancy )
+address: 'Rokin, Amsterdam', rate_per_day: 15, user: Nancy )
 
 Kids.photo.attach(io: File.open('app/assets/images/Kids bike_3.jpg'), filename: 'Kids bike_3.jpg')
 
@@ -66,16 +66,16 @@ Kids.save
 
 #Bookings
 
-Booking1 = Booking.find_or_initialize_by(start_date: Date.new(2021,2,1), end_date: Date.new(2021,2,10), status: 'accepted', user:
+Booking1 = Booking.find_or_initialize_by(start_date: Date.new(2021,2,1), end_date: Date.new(2021,2,10), status: 'Accepted', user:
 Nancy, bike: London)
 Booking1.save
 # p Booking1.errors.full_messages
 
-Booking2 = Booking.find_or_initialize_by(start_date: Date.new(2021,3,7), end_date: Date.new(2021,3,15), status: 'accepted', user:
+Booking2 = Booking.find_or_initialize_by(start_date: Date.new(2021,3,7), end_date: Date.new(2021,3,15), status: 'Accepted', user:
 Alice, bike: Kids)
 Booking2.save
 
-Booking3 = Booking.find_or_initialize_by(start_date: Date.new(2021,3,1), end_date: Date.new(2021,3,10), status: 'accepted', user:
+Booking3 = Booking.find_or_initialize_by(start_date: Date.new(2021,3,1), end_date: Date.new(2021,3,10), status: 'Accepted', user:
 Peter, bike: Turpentine)
 Booking3.save
 
