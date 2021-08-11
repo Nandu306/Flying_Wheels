@@ -40,6 +40,8 @@ gem 'cloudinary', '~> 1.16.0'
 
 gem 'geocoder'
 
+gem 'rake', '13.0.3'
+
 
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass'
