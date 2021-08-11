@@ -83,3 +83,8 @@ production:
   database: Flying_Wheels_production
   username: Flying_Wheels
   password: <%= ENV['FLYING_WHEELS_DATABASE_PASSWORD'] %>
+
+  database:
+  override:
+    - bundle install
+    - bundle exec rake db:create db:schema:load db:seed
