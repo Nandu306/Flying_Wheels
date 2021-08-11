@@ -10,7 +10,7 @@
     "bootstrap": "4.6",
     "jquery": "^3.6.0",
     "mapbox-gl": "2.4.0",
-    "node": "14.x",
+    // "node": "14.x",
     "popper.js": "^1.16.1",
     "turbolinks": "^5.2.0"
   },
@@ -19,6 +19,7 @@
     "webpack-dev-server": "3.11.2"
   },
   "engines": {
-    "node": "14.x"
+    "node": "14.x",
+    "yarn": "1.x"
   }
 }
