@@ -40,7 +40,7 @@ gem 'cloudinary', '~> 1.16.0'
 
 gem 'geocoder'
 
-gem 'rake', '13.0.6'
+# gem 'rake', '13.0.6'
 
 
 gem 'autoprefixer-rails', '10.2.5'
