@@ -283,7 +283,6 @@ DEPENDENCIES
   puma (~> 4.1)
   pundit
   rails (~> 6.0.3, >= 6.0.3.7)
-  rake (= 13.0.6)
   redis (~> 4.0)
   sass-rails (>= 6)
   selenium-webdriver
@@ -297,7 +296,7 @@ DEPENDENCIES
   webpacker (~> 4.0)
 
 RUBY VERSION
-   ruby 2.7.0p0
+   ruby 2.6.6p146
 
 BUNDLED WITH
    2.2.25
