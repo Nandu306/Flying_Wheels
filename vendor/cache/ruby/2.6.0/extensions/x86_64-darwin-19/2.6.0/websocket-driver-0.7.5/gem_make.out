@@ -1,0 +1,15 @@
+current directory: /Users/nandurajagopala/code/Nandu306/Flying_Wheels/vendor/cache/ruby/2.6.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+/Users/nandurajagopala/.rvm/rubies/ruby-2.6.6/bin/ruby -I /Users/nandurajagopala/.rvm/rubies/ruby-2.6.6/lib/ruby/site_ruby/2.6.0 -r ./siteconf20210813-70089-19n3rnm.rb extconf.rb
+creating Makefile
+
+current directory: /Users/nandurajagopala/code/Nandu306/Flying_Wheels/vendor/cache/ruby/2.6.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\= clean
+
+current directory: /Users/nandurajagopala/code/Nandu306/Flying_Wheels/vendor/cache/ruby/2.6.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\=
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+
+current directory: /Users/nandurajagopala/code/Nandu306/Flying_Wheels/vendor/cache/ruby/2.6.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\= install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 websocket_mask.bundle ./.gem.20210813-70089-17fo154
