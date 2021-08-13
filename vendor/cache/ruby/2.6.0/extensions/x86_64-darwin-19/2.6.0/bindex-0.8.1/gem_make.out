@@ -1,0 +1,15 @@
+current directory: /Users/nandurajagopala/code/Nandu306/Flying_Wheels/vendor/cache/ruby/2.6.0/gems/bindex-0.8.1/ext/skiptrace
+/Users/nandurajagopala/.rvm/rubies/ruby-2.6.6/bin/ruby -I /Users/nandurajagopala/.rvm/rubies/ruby-2.6.6/lib/ruby/site_ruby/2.6.0 -r ./siteconf20210813-43432-1f4fqjy.rb extconf.rb
+creating Makefile
+
+current directory: /Users/nandurajagopala/code/Nandu306/Flying_Wheels/vendor/cache/ruby/2.6.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= clean
+
+current directory: /Users/nandurajagopala/code/Nandu306/Flying_Wheels/vendor/cache/ruby/2.6.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\=
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.bundle
+
+current directory: /Users/nandurajagopala/code/Nandu306/Flying_Wheels/vendor/cache/ruby/2.6.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 cruby.bundle ./.gem.20210813-43432-1w6aomo/skiptrace/internal
