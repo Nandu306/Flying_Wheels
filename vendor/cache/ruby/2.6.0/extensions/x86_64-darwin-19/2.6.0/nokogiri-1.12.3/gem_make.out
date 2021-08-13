@@ -1,5 +1,5 @@
 current directory: /Users/nandurajagopala/code/Nandu306/Flying_Wheels/vendor/cache/ruby/2.6.0/gems/nokogiri-1.12.3/ext/nokogiri
-/Users/nandurajagopala/.rvm/rubies/ruby-2.6.6/bin/ruby -I /Users/nandurajagopala/.rvm/rubies/ruby-2.6.6/lib/ruby/site_ruby/2.6.0 -r ./siteconf20210813-51214-1vqidjh.rb extconf.rb
+/Users/nandurajagopala/.rvm/rubies/ruby-2.6.6/bin/ruby -I /Users/nandurajagopala/.rvm/rubies/ruby-2.6.6/lib/ruby/site_ruby/2.6.0 -r ./siteconf20210813-70089-1pzgn1h.rb extconf.rb
 checking for whether -std=c99 is accepted as CFLAGS... yes
 checking for whether -Wno-declaration-after-statement is accepted as CFLAGS... yes
 checking for whether -g is accepted as CFLAGS... yes
@@ -165,5 +165,5 @@ rm -rf /Users/nandurajagopala/code/Nandu306/Flying_Wheels/vendor/cache/ruby/2.6.
 
 current directory: /Users/nandurajagopala/code/Nandu306/Flying_Wheels/vendor/cache/ruby/2.6.0/gems/nokogiri-1.12.3/ext/nokogiri
 make DESTDIR\= install
-/usr/local/opt/coreutils/bin/ginstall -c -m 0755 nokogiri.bundle ./.gem.20210813-51214-11e6pqp/nokogiri
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 nokogiri.bundle ./.gem.20210813-70089-bhnhuf/nokogiri
 installing nokogiri libraries
