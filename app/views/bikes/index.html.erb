@@ -22,48 +22,28 @@
     <%#= link_to "Children", bikes_path(:bike_category => 'kids'), method: :get, class: 'index-button', style: 'text-decoration: none' %>
 
   </div>
- -->
+-->
 
-  <div class="row row-cols-1 row-cols-md-3 mt-4">
-
-
-    <% @bikes.each do |bike| %>
-
-    <div class="col mb-4 ">
-
-      <div class="card shadow-sm card-index" style = "border-radius: 10px;">
-
-        <div>
-          <%= cl_image_tag bike.photo.key, class: "card-index-img-top", style: "border-top-right-radius: 10px; border-top-left-radius:10px"  %>
-        </div>
+<div class="row row-cols-1 row-cols-md-3 mt-4">
 
 
-        <div class="card-body">
+  <% @bikes.each do |bike| %>
 
-          <div class="card-text" style="display:flex; align-items: baseline;">
+  <div class="col mb-4 ">
 
-           <div style="font-size: 26px;">
-            🚲
-          </div>
+    <div class="card shadow-sm card-index" style = "border-radius: 10px;">
 
-          &nbsp;
+      <div>
+        <%= cl_image_tag bike.photo.key, class: "card-index-img-top", style: "border-top-right-radius: 10px; border-top-left-radius:10px"  %>
+      </div>
 
-          <div>
-            :
-          </div>
 
-          &nbsp; &nbsp; &nbsp;
-
-          <div>
-            <p> <%= bike.bike_category %> </p>
-          </div>
-
-        </div>
+      <div class="card-body">
 
         <div class="card-text" style="display:flex; align-items: baseline;">
 
          <div style="font-size: 26px;">
-          💰
+          🚲
         </div>
 
         &nbsp;
@@ -75,22 +55,48 @@
         &nbsp; &nbsp; &nbsp;
 
         <div>
-          <p> <%= bike.rate_per_day %> </p>
+          <p> <%= bike.bike_category %> </p>
         </div>
 
       </div>
 
+      <div class="card-text" style="display:flex; align-items: baseline;">
+
+       <div style="font-size: 26px;">
+        💰
+      </div>
+
+      &nbsp;
+
+      <div>
+        :
+      </div>
+
+      &nbsp; &nbsp; &nbsp;
+
+      <div>
+        <p> <%= bike.rate_per_day %> </p>
+      </div>
+
     </div>
-    <div class="card-footer">
-      <small class="text-muted">
-        <%= link_to 'See more details about this bike', bike_path(bike) %>
-      </small>
+
+    <div>
+      <p> <%= @distance_away %> </p>
     </div>
 
   </div>
+  <div class="card-footer">
+    <small class="text-muted">
+      <%= link_to 'See more details about this bike', bike_path(bike) %>
+    </small>
+  </div>
+
+</div>
 </div>
 
 <% end %>
+
+
 
 
 </div>
