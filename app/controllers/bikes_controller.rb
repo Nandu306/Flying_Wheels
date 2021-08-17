@@ -6,8 +6,8 @@ class BikesController < ApplicationController
     @bikes = policy_scope(Bike).filter_by_bike_category(params[:bike_category]) if params[:bike_category].present?
 
     if Rails.env.production?
-      location_info = request.location
       @bikes.each do
+        location_info = request.location
         @distance_away = Geocoder::Calculations.distance_between([location_info.latitude,location_info.longitude], [@bike.latitude,@bike.longitude]).round(2)
       end
     end
