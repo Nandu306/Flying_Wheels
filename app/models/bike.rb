@@ -14,4 +14,5 @@ class Bike < ApplicationRecord
   validates :description, presence: true
   validates :rate_per_day, presence: true
   validates :address, presence: true
+
 end
