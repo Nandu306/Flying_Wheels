@@ -18,7 +18,7 @@ class Bike < ApplicationRecord
   def distance_away
     if Rails.env.production?
       location_info = request.location
-      @distance_away = Geocoder::Calculations.distance_between([location_info.latitude,location_info.longitude], [bike.latitude, bike.longitude]).round(2)
+      distance_away = Geocoder::Calculations.distance_between([location_info.latitude,location_info.longitude], [bike.latitude, bike.longitude]).round(2)
     end
   end
 
