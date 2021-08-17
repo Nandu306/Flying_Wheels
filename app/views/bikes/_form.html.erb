@@ -1,6 +1,7 @@
 <%= simple_form_for(bike) do |f| %>
   <%= f.input :bike_category, collection: ['Mountain', 'City', 'Children']  %>
   <%= f.input :frame_size %>
+  <%= f.input :address %>
   <%= f.input :description, hint: 'We recommend a one-liner to make your bike stand out.' %>
   <%= f.input :rate_per_day, hint: 'The average rate on our website is $25 per day.' %>
   <%= f.input :photo, as: :file, hint: "Pictures speak a thousand words ;-)" %>
