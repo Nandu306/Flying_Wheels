@@ -3,9 +3,9 @@
 .banner img {
   // background-repeat: no-repeat;
   // background-position: center;
-  border-radius: 10px;
+  // border-radius: 10px;
   height: 60vh;
-  width: 60vw;
+  width: 33vw;
   object-fit: cover;
   // background-size: cover;
   // justify-content: center;
@@ -18,7 +18,7 @@
 
 @media (max-width: 480px) {
   .banner img {
-    width: 80vw;
+    width: 95vw;
     height: 60vh;
     object-fit: cover;
   }
