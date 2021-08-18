@@ -86,23 +86,23 @@
 
     </div>
 
-    <% if Rails.env.production? %>
+    <%# if Rails.env.production? %>
 
 
-    <% n = 0 %>
+    <%# n = 0 %>
 
-    <% while n < (@bikes.length - 1) %>
+    <%# while n < (@bikes.length - 1) %>
 
     <% @distance_away.each do |distance_away| %>
     <div>
-      <p> <%= distance_away[n] %> </p>
+      <p> <%= distance_away[0] %> </p>
     </div>
 
     <% end %>
 
-    <% end %>
+    <%# end %>
 
-    <% end %>
+    <%# end %>
 
 
   </div>
