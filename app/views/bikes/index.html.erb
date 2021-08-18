@@ -86,10 +86,21 @@
 
     </div>
 
+    <% if Rails.env.production? %>
+
+
+    <% n = 0 %>
+
+    <% while n < (@bikes.length - 1) %>
+
     <% @distance_away.each do |distance_away| %>
     <div>
-      <p> <%= bike.distance_away %> </p>
+      <p> <%= distance_away[n] %> </p>
     </div>
+
+    <% end %>
+
+    <% end %>
 
     <% end %>
 
@@ -113,7 +124,7 @@
 </div>
 
 
-<script>
+<!-- <script>
 
   const element = document.querySelector('#box');
 
@@ -122,7 +133,7 @@
     event.currentTarget.classList.toggle('clicked');
   })
 
-</script>
+</script> -->
 
 
 
