@@ -15,11 +15,11 @@ class Bike < ApplicationRecord
   validates :rate_per_day, presence: true
   validates :address, presence: true
 
-  # def distance_away
-  #   if Rails.env.production?
-  #     location_info = request.location
-  #     distance_away = Geocoder::Calculations.distance_between([location_info.latitude,location_info.longitude], [bike.latitude, bike.longitude]).round(2)
-  #   end
-  # end
+  def distance_away
+    if Rails.env.production?
+      location_info = request.location
+      distance_away = Geocoder::Calculations.distance_between([location_info.latitude,location_info.longitude], [bike.latitude, bike.longitude]).round(2)
+    end
+  end
 
 end
