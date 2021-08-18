@@ -127,6 +127,15 @@
 }
 
 #map {
-  height: 95%;
+  height: 97%;
+  width: 100%;
 }
 
+.mapboxgl-control-container {
+  display: none;
+}
+
+.mapboxgl-canvas-container {
+  height: 95%;
+  width: 100%;
+}
