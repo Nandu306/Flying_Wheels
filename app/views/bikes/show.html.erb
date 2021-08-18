@@ -4,7 +4,7 @@
     <div class="col-sm">
 
       <div style="font-size:14px;">
-        <%= link_to bikes_path, style: "text-decoration: none; color: black; font-weight: bold;" do %>
+        <%= link_to bikes_path, style: "text-decoration: none; color: black; font-weight: bold; align-items: baseline;" do %>
         <%= image_tag('arrow_back.svg') + " " + ("Return to bikes") %>
         <% end %>
       </div>
@@ -26,11 +26,19 @@
 
 
           <div class="card-body">
-            <p class="card-text"><%= @bike.bike_category %></p>
-            <p class="card-text"><%= @bike.frame_size %></p>
-            <p class="card-text"><%= @bike.description %></p>
-            <p class="card-text"><%= @bike.rate_per_day %></p>
-            <p class="card-text"></p>
+
+            <div class="card-text" style="display:flex; justify-content: space-between;">
+
+              <div>
+                <p style="margin-bottom: 0px;"> <%= @bike.bike_category %> </p>
+                <p style= "color: #767676;"> Description: <%= @bike.description %> </p>
+              </div>
+
+              <div>
+                <p> $<%= @bike.rate_per_day %> <span style= "color: #767676; font-size: 10px;"> per day </span> </p>
+              </div>
+
+            </div>
             <p class="card-text"><small class="text-muted">This bike is <%= @distance_away %> km away from you</small></p>
           </div>
         </div>
@@ -58,8 +66,7 @@
           <div class="card card-right border border-dark shadow" style ="height: 48vh; border-radius: 20px;">
             <div class="card-body">
               <div id="map"
-              class= "mx-auto text-center"
-              style="width: 100%; height: 41vh; border-radius: 10px; padding:5px;"
+              style="width: 100%; border-radius: 10px; padding:5px;"
               data-markers="<%= @markers.to_json %>"
               data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
             </div>

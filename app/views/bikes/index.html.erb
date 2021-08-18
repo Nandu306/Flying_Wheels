@@ -46,64 +46,18 @@
 
       <div class="card-body">
 
-        <div class="card-text" style="display:flex; align-items: baseline;">
-
-         <div style="font-size: 26px;">
-          🚲
-        </div>
-
-        &nbsp;
+        <div class="card-text" style="display:flex; justify-content: space-between;">
 
         <div>
-          :
+          <p style="margin-bottom: 0px;"> <%= bike.bike_category %> </p>
+          <p style= "color: #767676; font-size: 12px;"> <%= bike.description %> </p>
         </div>
 
-        &nbsp; &nbsp; &nbsp;
-
-        <div>
-          <p> <%= bike.bike_category %> </p>
-        </div>
-
+         <div>
+        <p> $<%= bike.rate_per_day %> <span style= "color: #767676; font-size: 10px;"> per day </span> </p>
       </div>
 
-      <div class="card-text" style="display:flex; align-items: baseline;">
-
-       <div style="font-size: 26px;">
-        💰
       </div>
-
-      &nbsp;
-
-      <div>
-        :
-      </div>
-
-      &nbsp; &nbsp; &nbsp;
-
-      <div>
-        <p> <%= bike.rate_per_day %> </p>
-      </div>
-
-    </div>
-
-    <%# if Rails.env.production? %>
-
-
-    <%# n = 0 %>
-
-    <%# while n < (@bikes.length - 1) %>
-
-    <%# @distance_away.each do |distance_away| %>
-    <div>
-      <p> <%= bike.distance_away %> </p>
-    </div>
-
-    <%# end %>
-
-    <%# end %>
-
-    <%# end %>
-
 
   </div>
   <div class="card-footer">
