@@ -21,7 +21,7 @@
           <p class="nav-link text-center" style="font-size: 14px; font-weight:bold;">
             <i class="fas fa-biking" style= "color: #FF5A5F"></i>
             &nbsp;
-            Welcome <%= current_user.name %>
+            Hello, <%= current_user.name %>
           </p>
           <%= link_to "My dashboard", dashboard_path, class: "dropdown-item" %>
           <%= link_to "Bookings received", my_bookings_path, class: "dropdown-item" %>
