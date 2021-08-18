@@ -1,28 +1,34 @@
 
 <div class="container">
 
-  <!-- <div class="mt-2 mb-3 d-flex flex-lg-nowrap flex-lg-row"> -->
+  <div class="mt-2 mb-3" style = "align-items: baseline;">
 
-    <!-- <p> Filter by bike type: </p>
+    <div class="buttons-phone">
+      <p style = "font-size: 14px;"> Filter by bike type: </p>
+    </div>
 
-    &nbsp; &nbsp;
 
-    <%#= link_to 'All', bikes_path, method: :get, class: 'index-button', style: 'text-decoration: none' %>
-
-    &nbsp; &nbsp;
-
-    <%#= link_to 'Mountain', bikes_path(:bike_category => 'mountain'), method: :get, class: 'index-button', style: 'text-decoration: none' %>
+    <div class="buttons-phone mb-4">
+       <%= link_to 'All', bikes_path, method: :get, class: 'index-button', style: 'text-decoration: none; font-size: 14px;' %>
 
     &nbsp; &nbsp;
 
-    <%#= link_to 'City', bikes_path(:bike_category => 'city'), method: :get, class: 'index-button', style: 'text-decoration: none' %>
+    <%= link_to 'Mountain', bikes_path(:bike_category => 'Mountain'), method: :get, class: 'index-button', style: 'text-decoration: none; font-size: 14px;' %>
 
     &nbsp; &nbsp;
 
-    <%#= link_to "Children", bikes_path(:bike_category => 'kids'), method: :get, class: 'index-button', style: 'text-decoration: none' %>
+    <%= link_to 'City', bikes_path(:bike_category => 'City'), method: :get, class: 'index-button', style: 'text-decoration: none; font-size: 14px;' %>
+
+    &nbsp; &nbsp;
+
+    <div class="break"></div>
+
+    <%= link_to "Children", bikes_path(:bike_category => "Children's"), method: :get, class: 'index-button', style: 'text-decoration: none; font-size: 14px;' %>
+    </div>
+
 
   </div>
--->
+
 
 <div class="row row-cols-1 row-cols-md-3 mt-4">
 
@@ -80,14 +86,17 @@
 
     </div>
 
+
     <div>
-      <p> <%= bike.distance_away %> </p>
+      <p> <%= @distance_away %> </p>
     </div>
+
+
 
   </div>
   <div class="card-footer">
     <small class="text-muted">
-      <%= link_to 'See more details about this bike', bike_path(bike) %>
+      <%= link_to 'See more details about this bike', bike_path(bike), style: "text-decoration: none; color: #767676;" %>
     </small>
   </div>
 
@@ -103,7 +112,7 @@
 </div>
 
 
-<!-- <script>
+<script>
 
   const element = document.querySelector('#box');
 
@@ -112,7 +121,7 @@
     event.currentTarget.classList.toggle('clicked');
   })
 
-</script> -->
+</script>
 
 
 

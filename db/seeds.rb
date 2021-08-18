@@ -42,27 +42,45 @@ Alice.save
 
 # file = URI.open('https://cdn.shopify.com/s/files/1/0777/4197/files/1200x750-Page-Image-Custom-Builds.jpg?v=1479913058')
 
-Turpentine = Bike.find_or_initialize_by(bike_category: 'mountain', frame_size: '25D', description: 'Sturdy and well suited to
+Turpentine = Bike.find_or_initialize_by(bike_category: 'Mountain', frame_size: '25D', description: 'Sturdy and well suited to
 all terrains', address: 'Oosterpark, Amsterdam', rate_per_day: 20, user: Jake)
 
 Turpentine.photo.attach(io: File.open('app/assets/images/mountain_bike.jpeg'), filename: 'mountain_bike.jpeg')
 Turpentine.save
 
 
-London = Bike.find_or_initialize_by(bike_category: 'city', frame_size: '30D', description: 'Sturdy and well suited to cities',
+London = Bike.find_or_initialize_by(bike_category: 'City', frame_size: '30D', description: 'Sturdy and well suited to cities',
 address: 'Dam Square, Amsterdam', rate_per_day: 15, user: John)
 
 London.photo.attach(io: File.open('app/assets/images/city.jpg'), filename: 'city.jpg')
 
 London.save
 
-Kids = Bike.find_or_initialize_by(bike_category: 'kids', frame_size: '18D', description: 'Sturdy and well suited to children',
+Kids = Bike.find_or_initialize_by(bike_category: "Children's", frame_size: '18D', description: 'Sturdy and well suited to children',
 address: 'Rokin, Amsterdam', rate_per_day: 15, user: Nancy )
 
 Kids.photo.attach(io: File.open('app/assets/images/Kids bike_3.jpg'), filename: 'Kids bike_3.jpg')
 
 Kids.save
 
+Mighty = Bike.find_or_initialize_by(bike_category: 'Mountain', frame_size: '30D', description: 'Sturdy and well suited to
+all terrains', address: 'Oosterpark, Amsterdam', rate_per_day: 20, user: Alice)
+
+Mighty.photo.attach(io: File.open('app/assets/images/mountain_bike.jpeg'), filename: 'mountain_bike.jpeg')
+Mighty.save
+
+Paris = Bike.find_or_initialize_by(bike_category: 'City', frame_size: '20F', description: 'Sturdy and well suited to cities',
+address: 'Dam Square, Amsterdam', rate_per_day: 15, user: Peter)
+
+Paris.photo.attach(io: File.open('app/assets/images/city.jpg'), filename: 'city.jpg')
+
+Paris.save
+
+Rough = Bike.find_or_initialize_by(bike_category: 'Mountain', frame_size: '28D', description: 'Sturdy and well suited to
+all terrains', address: 'Oosterpark, Amsterdam', rate_per_day: 20, user: Nancy)
+
+Rough.photo.attach(io: File.open('app/assets/images/mountain_bike.jpeg'), filename: 'mountain_bike.jpeg')
+Rough.save
 
 #Bookings
 

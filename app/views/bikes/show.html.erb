@@ -4,7 +4,7 @@
     <div class="col-sm">
 
       <div style="font-size:14px;">
-        <%= link_to bikes_path, style: "text-decoration: none; color: black;" do %>
+        <%= link_to bikes_path, style: "text-decoration: none; color: black; font-weight: bold;" do %>
         <%= image_tag('arrow_back.svg') + " " + ("Return to bikes") %>
         <% end %>
       </div>
@@ -31,7 +31,7 @@
             <p class="card-text"><%= @bike.description %></p>
             <p class="card-text"><%= @bike.rate_per_day %></p>
             <p class="card-text"></p>
-            <p class="card-text"><small class="text-muted">This bike is <%= @bike.distance_away %> km away from you</small></p>
+            <p class="card-text"><small class="text-muted">This bike is <%= @distance_away %> km away from you</small></p>
           </div>
         </div>
 
@@ -46,7 +46,7 @@
               <%= f.input :end_date, as: :date, order: [:day, :month, :year], id: "end"  %>
               <br>
               <div style="display: flex; justify-content: center; align-items: center;">
-                <%= f.submit 'Book bike', { class: "home-button" } %>
+                <%= f.button :submit, 'Book bike', class: "home-button" %>
               </div>
               <% end %>
               <div id="total"></div>

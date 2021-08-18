@@ -5,3 +5,25 @@
 @import "button";
 @import "form";
 @import "card";
+
+
+@media (max-width: 480px) {
+  .buttons-phone {
+    flex-direction: column;
+    justify-content: center;
+    // height: 25vh;
+    margin: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .break {
+      margin-top: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+  .break {
+    display: none;
+  }
+}
