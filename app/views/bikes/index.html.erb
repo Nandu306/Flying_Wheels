@@ -86,11 +86,12 @@
 
     </div>
 
-
+    <% @distance_away.each do |distance_away| %>
     <div>
-      <p> <%= bike.distance_away %> </p>
+      <p> <%= distance_away %> </p>
     </div>
 
+    <% end %>
 
 
   </div>
