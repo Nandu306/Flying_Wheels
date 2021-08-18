@@ -1,8 +1,8 @@
-<%= simple_form_for ([@bike, @booking]), html: { id: :booking_form } do |f| %>
+<%= simple_form_for ([@bike, @booking]) do |f| %>
 <%= f.input :start_date, as: :date, order: [:day, :month, :year], id: "start" %>
 <%= f.input :end_date, as: :date, order: [:day, :month, :year], id: "end"  %>
 <br>
 <div style="display: flex; justify-content: center; align-items: center;">
-  <%= f.submit 'Book bike', { class: "home-button" } %>
+  <%= f.button :submit, 'Book bike', class: "home-button" %>
 </div>
 <% end %>
