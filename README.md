@@ -23,8 +23,8 @@ The web app is mobile-responsive.
 
 <p float="left">
   
-<img src="https://user-images.githubusercontent.com/82147496/129376653-d5eff01d-0b63-4a35-bfa2-fa10a3fb4474.png" width="200" height="400" hspace="20">
-<img src="https://user-images.githubusercontent.com/82147496/129378254-8a684bbd-c2b4-4742-8e32-f727d1eccc4e.png" width="200" height="400">
+<img src="https://user-images.githubusercontent.com/82147496/130058001-7db17e9c-a464-4bb9-a0d7-2d7481493da2.png" width="200" height="400" hspace="20">
+<img src="https://user-images.githubusercontent.com/82147496/130058074-cc1bef43-b63e-48e5-8d67-5adeb4f8ce63.png" width="200" height="400">
   
 </p>  
 
