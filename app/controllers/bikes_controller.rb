@@ -2,8 +2,8 @@ class BikesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index, :show ]
 
   def index
-    @bikes = policy_scope(Bike)
-    @bikes = policy_scope(Bike).filter_by_bike_category(params[:bike_category]) if params[:bike_category].present?
+    @bikes = policy_scope(Bike.includes(:user))
+    @bikes = policy_scope(Bike.includes(:user)).filter_by_bike_category(params[:bike_category]) if params[:bike_category].present?
 
     # if Rails.env.production?
     #   location_info = request.location
