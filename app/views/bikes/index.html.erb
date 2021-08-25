@@ -23,7 +23,7 @@
 
     <div class="break"></div>
 
-    <%= link_to "Children", bikes_path(:bike_category => "Children's"), method: :get, class: 'index-button', style: 'text-decoration: none; font-size: 14px;' %>
+    <%= link_to "Children", bikes_path(:bike_category => "Children"), method: :get, class: 'index-button', style: 'text-decoration: none; font-size: 14px;' %>
     </div>
 
 
@@ -40,9 +40,17 @@
     <div class="card shadow-sm card-index" style = "border-radius: 10px;">
 
       <div>
-        <%= cl_image_tag bike.photo.key, class: "card-index-img-top", style: "border-top-right-radius: 10px; border-top-left-radius:10px"  %>
-      </div>
 
+      <% if bike.photo.attached? %>
+
+          <%= cl_image_tag bike.photo.key, class: "card-index-img-top", style: "border-top-right-radius: 10px; border-top-left-radius:10px" %>
+
+      <% else %>
+
+          <%= image_tag('bike_illus.png', class: "card-index-img-top", style: "border-top-right-radius: 10px; border-top-left-radius:10px")  %>
+
+      <% end %>
+      </div>
 
       <div class="card-body">
 

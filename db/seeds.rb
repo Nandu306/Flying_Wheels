@@ -56,7 +56,7 @@ London.photo.attach(io: File.open('app/assets/images/city.jpg'), filename: 'city
 
 London.save
 
-Kids = Bike.find_or_initialize_by(bike_category: "Children's", frame_size: '18D', description: 'Sturdy and well suited to children',
+Kids = Bike.find_or_initialize_by(bike_category: "Children", frame_size: '18D', description: 'Sturdy and well suited to children',
 address: 'Rokin, Amsterdam', rate_per_day: 15, user: Nancy )
 
 Kids.photo.attach(io: File.open('app/assets/images/Kids bike_3.jpg'), filename: 'Kids bike_3.jpg')
