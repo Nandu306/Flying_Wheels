@@ -12,7 +12,7 @@ The web app is mobile-responsive.
 - git
 - GitHub
 - Heroku
-- Progres
+- PostgreSQL
 - HTML
 - CSS
 - Bootstrap
